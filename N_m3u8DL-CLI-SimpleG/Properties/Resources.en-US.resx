@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="audioOnly" xml:space="preserve">
+    <value>Audio Only</value>
+  </data>
+  <data name="audioOnly_Tip" xml:space="preserve">
+    <value>Download all segements but only mux for audio track</value>
+  </data>
+  <data name="baseUrl_Tip" xml:space="preserve">
+    <value>Set the Baseurl of the m3u8 file</value>
+  </data>
+  <data name="binaryMerge" xml:space="preserve">
+    <value>BinaryMerge</value>
+  </data>
+  <data name="binaryMerge_Tip" xml:space="preserve">
+    <value>Use binary to directly append and merge files</value>
+  </data>
+  <data name="changeDir" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="changeDir_Tip" xml:space="preserve">
+    <value>Select storage directory</value>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>Copy(_C)</value>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>Cut(_T)</value>
+  </data>
+  <data name="deleteAfterDone" xml:space="preserve">
+    <value>DeleteAfterDone</value>
+  </data>
+  <data name="deleteAfterDone_Tip" xml:space="preserve">
+    <value>After checking this option, all segments will be deleted after the merge is completed</value>
+  </data>
+  <data name="disableCheck" xml:space="preserve">
+    <value>NoIntegrityCheck</value>
+  </data>
+  <data name="disableCheck_Tip" xml:space="preserve">
+    <value>After the download is complete, skip checking whether the number of segments is consistent with the number of files described in m3u8</value>
+  </data>
+  <data name="disableDate" xml:space="preserve">
+    <value>NoDateInfo</value>
+  </data>
+  <data name="disableDate_Tip" xml:space="preserve">
+    <value>Do not write the Date info when using ffmpeg muxing</value>
+  </data>
+  <data name="disableMerge" xml:space="preserve">
+    <value>NoMerge</value>
+  </data>
+  <data name="disableMerge_Tip" xml:space="preserve">
+    <value>Do not merge segments</value>
+  </data>
+  <data name="disableProxy" xml:space="preserve">
+    <value>NoProxy</value>
+  </data>
+  <data name="disableProxy_Tip" xml:space="preserve">
+    <value>Do not actively use system's proxy</value>
+  </data>
+  <data name="exeToRun" xml:space="preserve">
+    <value>ToExecute</value>
+  </data>
+  <data name="exeToRun_Tip" xml:space="preserve">
+    <value>Path or file name of the main program</value>
+  </data>
+  <data name="fastStart" xml:space="preserve">
+    <value>MuxFastStart</value>
+  </data>
+  <data name="fastStart_Tip" xml:space="preserve">
+    <value>Move metadata to the head when using ffmpeg muxing</value>
+  </data>
+  <data name="getDL" xml:space="preserve">
+    <value>Get the downloader</value>
+  </data>
+  <data name="go_Tip" xml:space="preserve">
+    <value>Click me to call the downloader</value>
+  </data>
+  <data name="headers" xml:space="preserve">
+    <value>Headers</value>
+  </data>
+  <data name="headers_Tip" xml:space="preserve">
+    <value>Add HTTP headers to the request</value>
+  </data>
+  <data name="iv" xml:space="preserve">
+    <value>SetIV</value>
+  </data>
+  <data name="iv_Tip" xml:space="preserve">
+    <value>Enter the HEX string</value>
+  </data>
+  <data name="key" xml:space="preserve">
+    <value>SetKEY</value>
+  </data>
+  <data name="key_Tip" xml:space="preserve">
+    <value>You can drag in a 16-byte local KEY file or input a Base64 string</value>
+  </data>
+  <data name="m3u8" xml:space="preserve">
+    <value>M3U8</value>
+  </data>
+  <data name="m3u8_Tip" xml:space="preserve">
+    <value>You can input or drag in file; drag into folders or txt to batch download; double click to get from the clipboard</value>
+  </data>
+  <data name="maxSpeed" xml:space="preserve">
+    <value>SpeedLimit</value>
+  </data>
+  <data name="maxSpeed_Tip" xml:space="preserve">
+    <value>Set download speed limit(kb/s); 0 means no limit</value>
+  </data>
+  <data name="maxThread" xml:space="preserve">
+    <value>MaxThread</value>
+  </data>
+  <data name="maxThread_Tip" xml:space="preserve">
+    <value>The program will try to download using threads not higher than this value</value>
+  </data>
+  <data name="minThread" xml:space="preserve">
+    <value>MinThread</value>
+  </data>
+  <data name="minThread_Tip" xml:space="preserve">
+    <value>The program will try to download using threads not lower than this value</value>
+  </data>
+  <data name="muxJson" xml:space="preserve">
+    <value>MuxJson</value>
+  </data>
+  <data name="muxJson_Tip" xml:space="preserve">
+    <value>You can drag in a specific json file</value>
+  </data>
+  <data name="parm" xml:space="preserve">
+    <value>Params</value>
+  </data>
+  <data name="parm_Tip" xml:space="preserve">
+    <value>Startup parameters generated by this program</value>
+  </data>
+  <data name="parseOnly" xml:space="preserve">
+    <value>ParseOnly</value>
+  </data>
+  <data name="parseOnly_Tip" xml:space="preserve">
+    <value>Exit the program after parsing m3u8 and only generate meta.json</value>
+  </data>
+  <data name="paste" xml:space="preserve">
+    <value>Paste(_P)</value>
+  </data>
+  <data name="range" xml:space="preserve">
+    <value>SetRange</value>
+  </data>
+  <data name="range_Tip1" xml:space="preserve">
+    <value>Set the start time or start segment sequence number</value>
+  </data>
+  <data name="range_Tip2" xml:space="preserve">
+    <value>Set the end time or end fragment segment number</value>
+  </data>
+  <data name="retryCount" xml:space="preserve">
+    <value>RetryCount</value>
+  </data>
+  <data name="retryCount_Tip" xml:space="preserve">
+    <value>The number of times the program tries to download again when it encounters a stop speed</value>
+  </data>
+  <data name="stopSpeed" xml:space="preserve">
+    <value>StopSpeed</value>
+  </data>
+  <data name="stopSpeed_Tip" xml:space="preserve">
+    <value>When the download speed is lower than this value(kb/s) for several consecutive times, download again</value>
+  </data>
+  <data name="timeout" xml:space="preserve">
+    <value>Timeout(s)</value>
+  </data>
+  <data name="timeout_Tip" xml:space="preserve">
+    <value>Set the request timeout</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>FileName</value>
+  </data>
+  <data name="title_Tip" xml:space="preserve">
+    <value>Double click here to get the video title automatically</value>
+  </data>
+  <data name="topMost" xml:space="preserve">
+    <value>Set Top</value>
+  </data>
+  <data name="topMost_Tip" xml:space="preserve">
+    <value>Set Top most for current window</value>
+  </data>
+  <data name="workDir" xml:space="preserve">
+    <value>WorkDir</value>
+  </data>
+  <data name="workDir_Tip" xml:space="preserve">
+    <value>Storage directory, files will be downloaded here</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Choose a directory and the video will be downloaded here</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>URL is required</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Wait</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>Unexpected byte format</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Not 16 Bytes file</value>
+  </data>
+  <data name="setProxy_Tip" xml:space="preserve">
+    <value>Set HTTP Proxy, like http://127.0.0.1:8080</value>
+  </data>
+  <data name="setProxy" xml:space="preserve">
+    <value>SetProxy</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Proxy is invaild!</value>
+  </data>
+</root>

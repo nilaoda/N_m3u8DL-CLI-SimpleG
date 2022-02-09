@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="audioOnly" xml:space="preserve">
+    <value>仅合并音频轨道</value>
+  </data>
+  <data name="audioOnly_Tip" xml:space="preserve">
+    <value>下载全部分片,合并为音轨</value>
+  </data>
+  <data name="baseUrl_Tip" xml:space="preserve">
+    <value>设置m3u8文件的Baseurl</value>
+  </data>
+  <data name="binaryMerge" xml:space="preserve">
+    <value>使用二进制合并</value>
+  </data>
+  <data name="binaryMerge_Tip" xml:space="preserve">
+    <value>采用二进制直接追加合并文件</value>
+  </data>
+  <data name="changeDir" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="changeDir_Tip" xml:space="preserve">
+    <value>选择存储目录</value>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>复制(_C)</value>
+  </data>
+  <data name="cut" xml:space="preserve">
+    <value>剪切(_T)</value>
+  </data>
+  <data name="deleteAfterDone" xml:space="preserve">
+    <value>合并后删除分片</value>
+  </data>
+  <data name="deleteAfterDone_Tip" xml:space="preserve">
+    <value>勾选此项后合并完毕将删除所有分片</value>
+  </data>
+  <data name="disableCheck" xml:space="preserve">
+    <value>关闭完整性检查</value>
+  </data>
+  <data name="disableCheck_Tip" xml:space="preserve">
+    <value>下载完毕后跳过检查分片数量是否与m3u8内描述的文件数量一致</value>
+  </data>
+  <data name="disableDate" xml:space="preserve">
+    <value>合并时不写入日期</value>
+  </data>
+  <data name="disableDate_Tip" xml:space="preserve">
+    <value>使用ffmpeg混流时不写入Date属性</value>
+  </data>
+  <data name="disableMerge" xml:space="preserve">
+    <value>下载完成后不合并</value>
+  </data>
+  <data name="disableMerge_Tip" xml:space="preserve">
+    <value>不合并视频分片</value>
+  </data>
+  <data name="disableProxy" xml:space="preserve">
+    <value>不使用系统代理</value>
+  </data>
+  <data name="disableProxy_Tip" xml:space="preserve">
+    <value>不主动使用系统代理</value>
+  </data>
+  <data name="exeToRun" xml:space="preserve">
+    <value>执行程序</value>
+  </data>
+  <data name="exeToRun_Tip" xml:space="preserve">
+    <value>下载器主程序的文件名</value>
+  </data>
+  <data name="fastStart" xml:space="preserve">
+    <value>混流MP4边下边看</value>
+  </data>
+  <data name="fastStart_Tip" xml:space="preserve">
+    <value>使用ffmpeg混流时将元数据移动到头部</value>
+  </data>
+  <data name="getDL" xml:space="preserve">
+    <value>获取下载器(_N)</value>
+  </data>
+  <data name="go_Tip" xml:space="preserve">
+    <value>点击我即可调用下载器</value>
+  </data>
+  <data name="headers" xml:space="preserve">
+    <value>请求头</value>
+  </data>
+  <data name="headers_Tip" xml:space="preserve">
+    <value>为请求添加 HTTP Header</value>
+  </data>
+  <data name="iv" xml:space="preserve">
+    <value>自定义IV</value>
+  </data>
+  <data name="iv_Tip" xml:space="preserve">
+    <value>输入HEX字符串</value>
+  </data>
+  <data name="key" xml:space="preserve">
+    <value>自定义KEY</value>
+  </data>
+  <data name="key_Tip" xml:space="preserve">
+    <value>可拖入16字节的本地KEY文件或输入Base64字符串</value>
+  </data>
+  <data name="m3u8" xml:space="preserve">
+    <value>M3U8地址</value>
+  </data>
+  <data name="m3u8_Tip" xml:space="preserve">
+    <value>可以输入或拖入文件; 拖入文件夹或txt以批量下载; 双击从剪贴板获取</value>
+  </data>
+  <data name="maxSpeed" xml:space="preserve">
+    <value>限速(kb/s)</value>
+  </data>
+  <data name="maxSpeed_Tip" xml:space="preserve">
+    <value>设置下载限速;0为不限制</value>
+  </data>
+  <data name="maxThread" xml:space="preserve">
+    <value>最大线程</value>
+  </data>
+  <data name="maxThread_Tip" xml:space="preserve">
+    <value>程序将尝试使用不高于此数值的线程下载</value>
+  </data>
+  <data name="minThread" xml:space="preserve">
+    <value>最小线程</value>
+  </data>
+  <data name="minThread_Tip" xml:space="preserve">
+    <value>程序将尝试使用不低于此数值的线程下载</value>
+  </data>
+  <data name="muxJson" xml:space="preserve">
+    <value>混流文件</value>
+  </data>
+  <data name="muxJson_Tip" xml:space="preserve">
+    <value>可拖入特定的json文件</value>
+  </data>
+  <data name="parm" xml:space="preserve">
+    <value>启动参数</value>
+  </data>
+  <data name="parm_Tip" xml:space="preserve">
+    <value>本程序生成的启动参数</value>
+  </data>
+  <data name="parseOnly" xml:space="preserve">
+    <value>仅解析m3u8</value>
+  </data>
+  <data name="parseOnly_Tip" xml:space="preserve">
+    <value>在解析m3u8之后退出程序,仅生成meta.json</value>
+  </data>
+  <data name="paste" xml:space="preserve">
+    <value>粘贴(_P)</value>
+  </data>
+  <data name="range" xml:space="preserve">
+    <value>范围选择</value>
+  </data>
+  <data name="range_Tip1" xml:space="preserve">
+    <value>设置开始时间或开始分片序号</value>
+  </data>
+  <data name="range_Tip2" xml:space="preserve">
+    <value>设置终止时间或终止分片序号</value>
+  </data>
+  <data name="retryCount" xml:space="preserve">
+    <value>重试次数</value>
+  </data>
+  <data name="retryCount_Tip" xml:space="preserve">
+    <value>遇到停止速度时,程序尝试重新下载的次数</value>
+  </data>
+  <data name="stopSpeed" xml:space="preserve">
+    <value>停速(kb/s)</value>
+  </data>
+  <data name="stopSpeed_Tip" xml:space="preserve">
+    <value>当下载速度连续几次低于此数值时,重新下载</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>选择一个目录，视频将会下载到此处</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>找不到程序</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>URL为必填项</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>请稍候</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>非预期的byte格式</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>非16 Bytes文件</value>
+  </data>
+  <data name="timeout" xml:space="preserve">
+    <value>超时时长(s)</value>
+  </data>
+  <data name="timeout_Tip" xml:space="preserve">
+    <value>设置请求超时时长</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>视频标题</value>
+  </data>
+  <data name="title_Tip" xml:space="preserve">
+    <value>双击此处可以自动获取视频标题</value>
+  </data>
+  <data name="topMost" xml:space="preserve">
+    <value>置顶窗口</value>
+  </data>
+  <data name="topMost_Tip" xml:space="preserve">
+    <value>置顶当前窗口</value>
+  </data>
+  <data name="workDir" xml:space="preserve">
+    <value>工作目录</value>
+  </data>
+  <data name="workDir_Tip" xml:space="preserve">
+    <value>存储目录，文件将会被下载到这里</value>
+  </data>
+  <data name="setProxy" xml:space="preserve">
+    <value>设置代理</value>
+  </data>
+  <data name="setProxy_Tip" xml:space="preserve">
+    <value>输入http代理地址，如http://127.0.0.1:8080.</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>不支持该代理链接!</value>
+  </data>
+</root>

@@ -245,6 +245,36 @@ namespace N_m3u8DL_CLI_SimpleG
             }
         }
 
+        public static byte[] HexStringToBytes(string hexStr)
+        {
+            if (string.IsNullOrEmpty(hexStr))
+            {
+                return new byte[0];
+            }
+
+            if (hexStr.StartsWith("0x") || hexStr.StartsWith("0X"))
+            {
+                hexStr = hexStr.Remove(0, 2);
+            }
+
+            int count = hexStr.Length;
+
+            if (count % 2 == 1)
+            {
+                throw new ArgumentException("Invalid length of bytes:" + count);
+            }
+
+            int byteCount = count / 2;
+            byte[] result = new byte[byteCount];
+            for (int ii = 0; ii < byteCount; ++ii)
+            {
+                var tempBytes = Byte.Parse(hexStr.Substring(2 * ii, 2), System.Globalization.NumberStyles.HexNumber);
+                result[ii] = tempBytes;
+            }
+
+            return result;
+        }
+
         private string GetTitleFromURL(string url)
         {
             try
@@ -782,6 +812,11 @@ namespace N_m3u8DL_CLI_SimpleG
         private readonly TaskScheduler _syncContextTaskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
         private void Button_GO_Click(object sender, RoutedEventArgs e)
         {
+            //hex to base64
+            if (TextBox_Key.Text.Length == 32 || TextBox_Key.Text.Length == 34)
+            {
+                TextBox_Key.Text = Convert.ToBase64String(HexStringToBytes(TextBox_Key.Text));
+            }
             if (!File.Exists(TextBox_EXE.Text))
             {
                 MessageBox.Show(Properties.Resources.String2);

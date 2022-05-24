@@ -319,7 +319,7 @@
     <value>Not 16 Bytes file</value>
   </data>
   <data name="setProxy_Tip" xml:space="preserve">
-    <value>Set HTTP Proxy, like http://127.0.0.1:8080</value>
+    <value>Set HTTP/SOCKS5 Proxy, like http://127.0.0.1:8080</value>
   </data>
   <data name="setProxy" xml:space="preserve">
     <value>SetProxy</value>

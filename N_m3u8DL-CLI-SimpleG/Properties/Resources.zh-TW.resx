@@ -319,7 +319,7 @@
     <value>非16 Bytes文件</value>
   </data>
   <data name="setProxy_Tip" xml:space="preserve">
-    <value>輸入http代理地址，如http://127.0.0.1:8080</value>
+    <value>輸入http/socks5代理地址，如http://127.0.0.1:8080</value>
   </data>
   <data name="setProxy" xml:space="preserve">
     <value>設置代理</value>

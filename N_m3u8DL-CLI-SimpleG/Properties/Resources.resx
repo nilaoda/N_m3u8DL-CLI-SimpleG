@@ -322,7 +322,7 @@
     <value>设置代理</value>
   </data>
   <data name="setProxy_Tip" xml:space="preserve">
-    <value>输入http代理地址，如http://127.0.0.1:8080.</value>
+    <value>输入http/socks5代理地址，如http://127.0.0.1:8080.</value>
   </data>
   <data name="String7" xml:space="preserve">
     <value>不支持该代理链接!</value>

@@ -827,7 +827,7 @@ namespace N_m3u8DL_CLI_SimpleG
                 MessageBox.Show(Properties.Resources.String3);
                 return;
             }
-            if (TextBox_Proxy.Text != "" && !TextBox_Proxy.Text.StartsWith("http://"))
+            if (TextBox_Proxy.Text != "" && (!TextBox_Proxy.Text.StartsWith("http://") && !TextBox_Proxy.Text.StartsWith("socks5://")))
             {
                 MessageBox.Show(Properties.Resources.String7);
                 return;

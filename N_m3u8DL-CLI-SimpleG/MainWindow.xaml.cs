@@ -808,8 +808,6 @@ namespace N_m3u8DL_CLI_SimpleG
             }
         }
 
-        //任务调度器
-        private readonly TaskScheduler _syncContextTaskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
         private void Button_GO_Click(object sender, RoutedEventArgs e)
         {
             //hex to base64
@@ -841,71 +839,68 @@ namespace N_m3u8DL_CLI_SimpleG
                 Button_GO.Content = Properties.Resources.String4;
                 string inputUrl = TextBox_URL.Text;
                 string exePath = TextBox_EXE.Text;
-                Task.Factory.StartNew(() =>  
+                List<string> m3u8list = new List<string>();
+                if (Directory.Exists(inputUrl))
                 {
-                    List<string> m3u8list = new List<string>();
-                    if (Directory.Exists(inputUrl))
+                    foreach (var file in Directory.GetFiles(inputUrl))
                     {
-                        foreach (var file in Directory.GetFiles(inputUrl))
+                        if (new FileInfo(file).Name.ToLower().EndsWith(".m3u8") || new FileInfo(file).Name.ToLower().EndsWith(".mpd"))
                         {
-                            if (new FileInfo(file).Name.ToLower().EndsWith(".m3u8") || new FileInfo(file).Name.ToLower().EndsWith(".mpd")) 
+                            m3u8list.Add(new FileInfo(file).FullName);
+                        }
+                    }
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("@echo off");
+                    sb.AppendLine("::Created by N_m3u8DL-CLI-SimpleG\r\n");
+                    //sb.AppendLine("chcp 65001 >nul");
+                    int i = 0;
+                    foreach (var item in m3u8list)
+                    {
+                        TextBox_Title.Text = GetTitleFromURL(item);
+                        sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
+                        sb.AppendLine("\"" + exePath + "\" \"" + item.Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
+                    }
+                    //sb.AppendLine("del %0");
+                    string bat = "Batch-" + DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".bat";
+                    File.WriteAllText(bat,
+                        sb.ToString(),
+                        Encoding.Default);
+                    Process.Start(bat);
+                }
+                else
+                {
+                    m3u8list = File.ReadAllLines(inputUrl, GetType(inputUrl)).ToList();
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("@echo off");
+                    sb.AppendLine("::Created by N_m3u8DL-CLI-SimpleG");
+                    //sb.AppendLine("chcp 65001 >nul");
+                    int i = 0;
+                    foreach (var item in m3u8list)
+                    {
+                        if (item.Trim() != "")
+                        {
+                            if (item.StartsWith("http"))
                             {
-                                m3u8list.Add(new FileInfo(file).FullName);
+                                TextBox_Title.Text = GetTitleFromURL(item);
+                                sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
+                                sb.AppendLine("\"" + exePath + "\" \"" + item.Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
+                            }
+                            //自定义文件名
+                            else
+                            {
+                                TextBox_Title.Text = item.Substring(0, item.IndexOf(",http"));
+                                sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
+                                sb.AppendLine("\"" + exePath + "\" \"" + item.Replace(TextBox_Title.Text + ",", "").Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
                             }
                         }
-                        StringBuilder sb = new StringBuilder();
-                        sb.AppendLine("@echo off");
-                        sb.AppendLine("::Created by N_m3u8DL-CLI-SimpleG\r\n");
-                        //sb.AppendLine("chcp 65001 >nul");
-                        int i = 0;
-                        foreach (var item in m3u8list)
-                        {
-                            TextBox_Title.Text = GetTitleFromURL(item);
-                            sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
-                            sb.AppendLine("\"" + exePath + "\" \"" + item.Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
-                        }
-                        //sb.AppendLine("del %0");
-                        string bat = "Batch-" + DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".bat";
-                        File.WriteAllText(bat,
-                            sb.ToString(),
-                            Encoding.Default);
-                        Process.Start(bat);
                     }
-                    else
-                    {
-                        m3u8list = File.ReadAllLines(inputUrl, GetType(inputUrl)).ToList();
-                        StringBuilder sb = new StringBuilder();
-                        sb.AppendLine("@echo off");
-                        sb.AppendLine("::Created by N_m3u8DL-CLI-SimpleG");
-                        //sb.AppendLine("chcp 65001 >nul");
-                        int i = 0;
-                        foreach (var item in m3u8list)
-                        {
-                            if (item.Trim() != "")
-                            {
-                                if (item.StartsWith("http"))
-                                {
-                                    TextBox_Title.Text = GetTitleFromURL(item);
-                                    sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
-                                    sb.AppendLine("\"" + exePath + "\" \"" + item.Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
-                                }
-                                //自定义文件名
-                                else
-                                {
-                                    TextBox_Title.Text = item.Substring(0, item.IndexOf(",http"));
-                                    sb.AppendLine($"TITLE \"[{++i}/{m3u8list.Count}] - {TextBox_Title.Text}\"");
-                                    sb.AppendLine("\"" + exePath + "\" \"" + item.Replace(TextBox_Title.Text + ",", "").Replace("%", "%%") + "\" " + TextBox_Parameter.Text.Remove(0, TextBox_Parameter.Text.IndexOf("\" ") + 2));
-                                }
-                            }
-                        }
-                        //sb.AppendLine("del %0");
-                        string bat = "Batch-" + DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".bat";
-                        File.WriteAllText(bat,
-                            sb.ToString(),
-                            Encoding.Default);
-                        Process.Start(bat);
-                    }
-                },new CancellationTokenSource().Token, TaskCreationOptions.None, _syncContextTaskScheduler).Wait();
+                    //sb.AppendLine("del %0");
+                    string bat = "Batch-" + DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".bat";
+                    File.WriteAllText(bat,
+                        sb.ToString(),
+                        Encoding.Default);
+                    Process.Start(bat);
+                }
 
                 Button_GO.Content = "GO";
                 this.IsEnabled = true;

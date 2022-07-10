@@ -811,9 +811,12 @@ namespace N_m3u8DL_CLI_SimpleG
         private void Button_GO_Click(object sender, RoutedEventArgs e)
         {
             //hex to base64
-            if (TextBox_Key.Text.Length == 32 || TextBox_Key.Text.Length == 34)
+            try
             {
                 TextBox_Key.Text = Convert.ToBase64String(HexStringToBytes(TextBox_Key.Text));
+            }
+            catch(Exception) {
+
             }
             if (!File.Exists(TextBox_EXE.Text))
             {
